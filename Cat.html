@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en"><!-- language -->
+  <head>
+    <title>CatPhotoApp</title><!-- Judul tab -->
+  </head>
+  <body><!-- Isi di websitenya, semua selain yang di head -->
+    <main><!-- main ya buat isinya-->
+      <h1>CatPhotoApp</h1><!-- Judul Paling besar nya -->
+      <section><!-- section untuk memisahkan bagian bagian nya -->
+        <h2>Cat Photos</h2>
+				<!-- a itu anchor untuk mengaitkan sesuatu dengan sesuatu, 
+					target_blank itu supaya dibuka di tab baru, href itu untuk linknya
+				p itu paragraph-->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+				<!-- img itu gak perlu penutup ini untuk gambar, src itu source, jadi link gambarnya, alt itu untuk nampilkan kalau koneksi lambat-->
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul> <!-- ul itu unordered list, artinya list yang gak pake angka cuman pake point point -->
+          <li>cat nip</li> <!-- li itu untuk isi dari ul nya -->
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure><!-- kurang lebih figure untuk membuat semuanya jadi satu kesatuan kecil, kayak section versi lebih sempit-->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+					<!-- figcaption itu figure caption jadi tulisan dibawah figure -->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  <!-- em itu untuk italic, harusnya i juga bisa -->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol> <!-- ol itu ordered list, artinya list yang berurut atau pakai angka-->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+				<!-- form itu buat input dari user -->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset> <!-- fieldset membuat kotak untuk 1 pertanyaan -->
+						<!-- sesuai namanya, legend berguna untuk memberi petunjuk soal pertanyaan yang ditanyakan. Bisa dibilang pertanyaannya -->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+						<!-- label yang diluar input artinya, semua isi input nya bisa ditekan untuk memilih pertanyaan itu 
+						input, itu untuk menerima input 
+						id itu untuk memberi nama kayak penamaan variabel
+						type itu tipe inputnya, radio itu kayak PG, pilih 1
+						name itu kategorinya, jadi kalau ada berbagai pilihan dia 1 kategori
+						value, disamakan dengan id jadi saat dipilih itu sesuai dengan keinginan usernya
+						checked supaya dia sudah tercek dulu sebelum user milih, untuk memastikan user milih-->
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+						<!-- type checkbox untuk buat checkbox yang jawabannya bisa lebih dari 1 
+						label disini hanya di tulisan loving supaya kalau loving nya ditekan langsung terpilih kalau ada lebih dari 1 kata, kata yang lain gak bisa
+						for disini untuk menujukan pilihannya, jadi kalau nekan tulisannya itu dia bakal mengcentang pilihan sesuai dengan isi for nya-->
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+					<!-- type text isinya ya text 
+					placeholder itu untuk isi di dalamnya yang warnanya abu abu
+					required artinya perlu di isi-->
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+					<!-- ini untuk mmembuat tombol
+					type nya submit, Submit di dalam itu untuk tulisan di tombolnya-->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer><!-- footer ya footer :v -->
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
